@@ -1,7 +1,6 @@
 package day4
 
 import (
-	"fmt"
 	"github.com/mitchellh/mapstructure"
 	"io/ioutil"
 	"log"
@@ -69,16 +68,4 @@ func ReadPassports(filename string) []Passport {
 		passports = append(passports, *NewPassport(buffer))
 	}
 	return passports
-}
-
-func main() {
-	passports := ReadPassports("src/adventofcode/day4/input.txt")
-	counter := 0
-	for _, p := range passports {
-		if p.isValid() {
-			counter++
-		}
-	}
-	fmt.Printf("Number of passports: %d\n", len(passports))
-	fmt.Printf("Valida Passports: %d\n", counter)
 }
