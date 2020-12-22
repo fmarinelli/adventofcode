@@ -1,4 +1,4 @@
-module adventofcode/day4
+module github.com/fmarinelli/adventofcode/day4
 
 go 1.13
 
